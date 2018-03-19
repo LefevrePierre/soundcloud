@@ -39,9 +39,12 @@ Route::get('/musiques', 'HomeControlleur@musiques');
 
 Route::get('/changerSuivi/{id}', 'MonControlleur@changerSuivi')->where('id','[0-9]+')->middleware('auth');
 
-Route::get('/listPlaylists', 'MonControlleur@playlist');
+Route::get('/playlists', 'MonControlleur@playlists');
 
-Route::post('/creerPlaylist', 'MonControlleur@creerPlaylist');
+
+Route::get('/playlist/{id}', 'MonControlleur@playlist')->where('id', '[0-9]+');
+
+// Route::post('/creerPlaylist', 'MonControlleur@creerPlaylist');
 
 Route::post('/playlistAjout/{idP}/{idM}', 'MonControlleur@playlistAjout')->where('idM', '[0-9]+')->where('idP', '[0-9]+');
 

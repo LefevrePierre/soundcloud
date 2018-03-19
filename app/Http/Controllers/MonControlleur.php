@@ -73,9 +73,18 @@ class MonControlleur extends Controller
 
 
     }
-    public function playlist() {
-        return view('listPlaylists');
+    public function playlists() {
 
+        return view('playlists');
+
+    }
+
+    public function playlist($id)
+    {
+        $playlist = Playlist::find($id);
+        if ($playlist==false)
+            abort(404);
+        return view("playlist",['playlist'=>$playlist]);
     }
     public function creerPlaylist(Request $request) {
 

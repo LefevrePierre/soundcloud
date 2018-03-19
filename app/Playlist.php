@@ -11,6 +11,6 @@ class Playlist extends Model
     //
 
     public function chansons() {
-        return $this->belongsToMany("App\chanson", "contient", "chanson_id", "playlist_id");
+        return $this->belongsToMany("App\chanson", "contient", "playlist_id", "chanson_id");
     }
 }
