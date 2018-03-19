@@ -79,6 +79,7 @@ class MonControlleur extends Controller
 
     $p = new Playlist();
     $p->nom = $request->input('nom');
+    $p->description = $request->input('description');
     $p->utilisateur_id = Auth::id();
     $p->save();
     return redirect('/listPlaylists');

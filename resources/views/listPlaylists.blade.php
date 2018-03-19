@@ -4,6 +4,7 @@
 
     <form action="creerPlaylist" method="POST">
         <input type="text" name="nom" placeholder="titre de la playlist">
+        <textarea name="description" placeholder="description de la playlist" cols="30" rows="10"></textarea>
         <input type="submit" name="creer" value="créer">
         {{ csrf_field() }}
     </form>
