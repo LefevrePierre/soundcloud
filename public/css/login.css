@@ -1,0 +1,44 @@
+
+.login__remember{
+    display:flex;
+    justify-content: space-between;
+}
+
+.login__forgot{
+    color:#6a6c73;
+    text-decoration: none;
+    -webkit-transition: 900ms all ease;
+}
+
+.login__forgot:hover{
+    color:#467cc5;
+    text-decoration: none;
+}
+
+
+
+
+.login__btn__right{
+    text-align:right;
+}
+.login__btn{
+    margin-top:20px;
+    background-color:transparent;
+    color:white;
+    text-transform:uppercase;
+    border-radius:16px;
+    padding:4px 25px 4px 25px;
+    -webkit-transition: 900ms all ease;
+    border:1px solid white;
+
+}
+
+.login__btn:hover{
+
+    background-color:white;
+    color:#151924;
+    text-transform:uppercase;
+    border-radius:16px;
+    padding:4px 25px 4px 25px;
+    -webkit-transition: 900ms all ease;
+}

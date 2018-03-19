@@ -1,0 +1,62 @@
+.registration__background{
+    background: url("/img/registration-login.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-position: 50% 72%;
+
+}
+
+.registration__container{
+    max-width:600px;
+    margin:0 auto;
+}
+
+.registration__back{
+    text-transform: uppercase;
+    padding-top:100px;
+    margin-bottom:80px;
+}
+.registration__back a {
+    color: #d75a4a;
+    -webkit-transition: 900ms all ease;
+    text-decoration: none;
+}
+
+.registration__back a:hover{
+    color: #b74537;
+    text-decoration: none;
+}
+.registration__form__control{
+    width:100%;
+    background-color:rgba(0,0,0,0) !important;
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid grey;
+margin-bottom: 20px;
+}
+
+.registration__btn__create{
+    text-align: right;
+}
+.registration__btn{
+     margin-top:40px;
+     background-color:#d75a4a;
+     color:white;
+     text-transform:uppercase;
+     border-radius:16px;
+     padding:4px 25px 4px 25px;
+    -webkit-transition: 900ms all ease;
+     border:1px solid #d75a4a;
+ }
+
+.registration__btn:hover {
+    background-color:transparent;
+    color:#d75a4a;
+    text-transform:uppercase;
+    border-radius:16px;
+    padding:4px 25px 4px 25px;
+    border:#d75a4a 1px solid;
+}
+input {text-transform: uppercase;}
