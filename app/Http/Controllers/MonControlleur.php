@@ -41,7 +41,9 @@ class MonControlleur extends Controller
         if ($request->hasFile('chanson') && $request->file('chanson')->isValid()) {
             $m = new chanson();
             $m->fichier = $request->file('chanson')->store("public/chansons/". Auth::id());
-            $m->fichier = str_replace("public/", 'storage/',$m->fichier);
+            $m->fichier = str_replace("public/", '/storage/',$m->fichier);
+            $m->img = $request->file('img')->store("public/img/". Auth::id());
+            $m->img = str_replace("public/", '/storage/',$m->img);
             $m->nom = $request->input('nom');
             $m->style = $request->input('style');
             $m->post_date = date("Y-m-d");
