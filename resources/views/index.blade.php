@@ -7,3 +7,4 @@
             <li><a href="#" class="chanson" data-file='{{$c->fichier}}'>{{$c->nom}}</a></li>
             @endforeach
     </ul>
+@endsection
