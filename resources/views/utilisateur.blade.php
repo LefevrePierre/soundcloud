@@ -21,7 +21,7 @@
         <h2>Mes musiques</h2>
         <ul>
     @foreach($utilisateur->musiques as $m)
-<img src="{{$m->fichier}}" alt="{{$m->nom}}"/>
+<img src="{{$m->img}}" alt="{{$m->nom}}"/>
 
             <li>
         <a href="#" class="chanson" data-file="{{$m->fichier}}" >{{$m->nom}}</a>
@@ -32,7 +32,7 @@
                 <ul>
                     @foreach(Auth::user()->playlists as $p)
                         <li>
-                            <img src="{{$p->fichier}}"  />
+                            <img src="{{$p->fichier}}"/>
                             <span>{{$p->nom}}</span>
                             <form action="/playlistAjout/{{$p->id}}/{{$m->id}}" method="post" enctype="multipart/form-data">
                                 <input type="submit" name="ajouter" value="ajouter à la playlist"/>

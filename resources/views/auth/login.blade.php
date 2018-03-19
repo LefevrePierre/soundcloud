@@ -7,7 +7,7 @@
     <div class="registration__back"> <a href="/">&#60; Retour à l'accueil</a></div>
 
 
-                    <form autocomplete=off class="registration__form" method="POST" action="{{ route('login') }}">
+                    <form autocomplete='off' class="registration__form" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
