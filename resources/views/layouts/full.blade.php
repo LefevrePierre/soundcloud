@@ -108,11 +108,12 @@
 
 
     <main class="py-4" id="pjax-container">
+        <div class="container__c">
     @yield('content')
+        </div>
 </main>
 
 
-</div>
 
 
 <!-- Scripts -->

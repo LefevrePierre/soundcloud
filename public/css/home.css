@@ -5,6 +5,11 @@ a:hover{
 ul {
     list-style: none;
 }
+
+.container__c{
+    width:100%;
+    background-color: red;
+}
 input:focus {
     outline:none;
 }
