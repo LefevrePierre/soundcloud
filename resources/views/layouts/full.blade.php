@@ -16,6 +16,8 @@
     <link href="{{ asset('css/toastr.css') }}" rel="stylesheet">
     <link href="{{ asset('css/login.css') }}" rel="stylesheet">
     <link href="{{ asset('css/registration.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/home.css') }}" rel="stylesheet">
+
 </head>
 <body>
 <main id="app">
@@ -74,22 +76,30 @@
             </div>
         </div>
     </nav>
-    <form id="search">
-        <input type="search" name="search" required placeholder="Recherchez des artistes ou encore des titres">
-        <input type="submit"/>
 
+    <div class="leftbar__container" id="pjax-container">
+        <div class="leftbar__content">
+        <div><img src="#" class="leftbar__logo" alt="logo"></div>
+
+    <form id="search" >
+        <input type="search" class="leftbar__search"name="search" required placeholder="Rechercher">
+        <input type="submit"/>
     </form>
-    <a href="utilisateur">Ma musique</a><br/>
+
+    <img src="#" alt=""/> <a href="utilisateur">Ma musique</a><br/>
     <p>Uploadez vos titres préférés<br/> dès maintenant, partagez<br/> vos goûts à la communauté</p>
     @auth
-        <a href="/formulairechanson" data-pjax>Uploadez la votre</a><br>
+        <a href="/formulairechanson" data-pjax class="leftbar__input-form">Uploadez la votre</a><br>
     @endauth
     <ul>
-        <li>Coups de coeurs</li>
-        <li>Mes playlists</li>
-        <li>Mes albums</li>
+        <li><a href="#">Coups de coeurs</a></li>
+       <li> <a href="/playlists">Mes playlists</a></li>
+        <li><a href="#">Albums</a></li>
+
     </ul>
     <audio id="audio" controls src="/js/musique1.mp3"></audio>
+        </div>
+    </div>
 
     <main class="py-4" id="pjax-container">
     @yield('content')
