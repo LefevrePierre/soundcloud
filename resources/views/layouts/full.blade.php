@@ -79,31 +79,39 @@
 
     <div class="leftbar__container" id="pjax-container">
         <div class="leftbar__content">
-        <div><img src="#" class="leftbar__logo" alt="logo"></div>
+        <div><img src="/img/logo.png" class="leftbar__logo" alt="logo"></div>
 
-    <form id="search" >
-        <input type="search" class="leftbar__search"name="search" required placeholder="Rechercher">
-        <input type="submit"/>
+    <form id="search" class="leftbar__searchform" >
+        <input type="search" class="leftbar__search-input"name="search" required placeholder="Rechercher" >
+        <button type="submit" class="leftbar__loupe"><img src="/img/icon-loupe.png" class="leftbar__loupe"></button>
     </form>
-
+<div class="leftbar__user">
     <img src="#" alt=""/> <a href="utilisateur">Ma musique</a><br/>
-    <p>Uploadez vos titres préférés<br/> dès maintenant, partagez<br/> vos goûts à la communauté</p>
+</div>
+
+    <p class="leftbar__paragraph">Uploadez vos titres préférés<br/> dès maintenant, partagez<br/> vos goûts à la communauté</p>
+
     @auth
-        <a href="/formulairechanson" data-pjax class="leftbar__input-form">Uploadez la votre</a><br>
+        <a href="/formulairechanson" data-pjax class="leftbar__input-form">Uploadez!</a><br>
     @endauth
-    <ul>
-        <li><a href="#">Coups de coeurs</a></li>
-       <li> <a href="/playlists">Mes playlists</a></li>
-        <li><a href="#">Albums</a></li>
+    <ul class="leftbar__ul">
+       <li class="leftbar__li"> <img src="/img/coeur.png" class="leftbar__icons"><a href="#">Coups de coeurs</a></li>
+       <li class="leftbar__li"> <img src="/img/playlist.png" class="leftbar__icons"><a href="/playlists">Mes playlists</a></li>
+        <li class="leftbar__li"><img src="/img/disque.png" class="leftbar__icons"><a href="#">Albums</a></li>
 
     </ul>
-    <audio id="audio" controls src="/js/musique1.mp3"></audio>
+            <audio id="audio" controls src="/js/musique1.mp3"></audio>
         </div>
+
     </div>
+</main>
+
 
     <main class="py-4" id="pjax-container">
     @yield('content')
 </main>
+
+
 </div>
 
 
