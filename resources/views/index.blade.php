@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <a href="Playlists/">Liste des playlists</a>
+    <a href="playlists/">Liste des playlists</a>
     Je susi dans l'index
     <ul>
         @foreach($chansons as $c)

@@ -74,8 +74,23 @@
             </div>
         </div>
     </nav>
+    <form id="search">
+        <input type="search" name="search" required placeholder="Recherchez des artistes ou encore des titres">
+        <input type="submit"/>
 
+    </form>
+    <a href="utilisateur">Ma musique</a><br/>
+    <p>Uploadez vos titres préférés<br/> dès maintenant, partagez<br/> vos goûts à la communauté</p>
+    @auth
+        <a href="/formulairechanson" data-pjax>Uploadez la votre</a><br>
+    @endauth
+    <ul>
+        <li>Coups de coeurs</li>
+        <li>Mes playlists</li>
+        <li>Mes albums</li>
+    </ul>
     <audio id="audio" controls src="/js/musique1.mp3"></audio>
+
     <main class="py-4" id="pjax-container">
     @yield('content')
 </main>

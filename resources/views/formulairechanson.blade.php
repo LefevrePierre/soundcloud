@@ -4,16 +4,10 @@
 
 @include('_errors')
 
-<audio id="audio" controls src="/js/musique1.mp3"></audio>
-<form id="search">
-    <input type="search" name="search" required placeholder="Recherchez des artistes ou encore des titres">
-    <input type="submit"/>
 
-</form>
 
-@auth
-    <a href="/formulairechanson" data-pjax>Uploadez la votre</a>
-@endauth
+
+
 
 <div id="aremplir">
 
