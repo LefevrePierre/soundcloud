@@ -96,13 +96,35 @@
     @endauth
     <ul class="leftbar__ul">
        <li class="leftbar__li"> <img src="/img/coeur.png" class="leftbar__icons"><a href="#">Coups de coeurs</a></li>
-       <li class="leftbar__li"> <img src="/img/playlist.png" class="leftbar__icons"><a href="/playlists">Mes playlists</a></li>
+       <li class="leftbar__li btn-playlists"> <img src="/img/playlist.png" class="leftbar__icons">Mes playlists</li>
         <li class="leftbar__li"><img src="/img/disque.png" class="leftbar__icons"><a href="#">Albums</a></li>
 
     </ul>
             <audio id="audio" controls src="/js/musique1.mp3"></audio>
         </div>
 
+    </div>
+
+    <div class="leftbar__playlists">
+        <form action="creerPlaylist" method="POST">
+            <input type="text" name="nom" placeholder="titre de la playlist">
+            <textarea name="description" placeholder="description de la playlist" cols="30" rows="10"></textarea>
+            <input type="submit" name="creer" value="créer">
+            {{ csrf_field() }}
+        </form>
+
+
+        <ul>
+            @foreach(Auth::user()->playlists as $p)
+                <li>
+                    <img src="{{$p->fichier}}"  />
+                    <a href="">{{$p->nom}}</a>
+                    <form action="ajouterPlaylist" method="post" enctype="multipart/form-data">
+                        <input type="submit" name="ajouter" value="ajouter à la playlist"/>
+                    </form>
+                </li>
+            @endforeach
+        </ul>
     </div>
 </main>
 
@@ -122,6 +144,7 @@
 <script src="{{ asset('js/jquery.pjax.js') }}"></script>
 <script src="{{ asset('js/toastr.min.js') }}"></script>
 <script src="{{ asset('js/lecteur.js') }}"></script>
+<script src="{{ asset('js/script.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
 
 </body>
