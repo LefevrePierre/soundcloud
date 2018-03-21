@@ -9,6 +9,7 @@ ul {
 .container__c{
     width:100%;
     background-color: red;
+    height:100vh;
 }
 input:focus {
     outline:none;
@@ -16,8 +17,9 @@ input:focus {
 .leftbar__container{
     background-color:#fff;
     position:fixed;
-    z-index:2;
-    max-width:220px;
+    z-index:2000;
+    top:0;
+    width:220px;
     height:100vh;
 }
 

@@ -77,7 +77,7 @@
         </div>
     </nav>
 
-    <div class="leftbar__container" id="pjax-container">
+    <div class="leftbar__container" >
         <div class="leftbar__content">
         <div><img src="/img/logo.png" class="leftbar__logo" alt="logo"></div>
 
