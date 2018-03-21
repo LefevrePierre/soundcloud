@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <h3>Les utilisateurs</h3>
+    <h3>Artistes</h3>
 <ul>
     @foreach($utilisateurs as $u)
         <li>
@@ -9,7 +9,8 @@
         @endforeach
 
     </ul>
-    <h3>Les chansons</h3>
+    <h3>Titres</h3>
+    <ul>
     @foreach($chansons as $m)
         <li>
             <a href="/chansons/{{$m->id}}">{{$m->nom}}</a>
@@ -18,3 +19,4 @@
 
         </ul>
     @endsection
+

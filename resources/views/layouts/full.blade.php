@@ -17,10 +17,11 @@
     <link href="{{ asset('css/login.css') }}" rel="stylesheet">
     <link href="{{ asset('css/registration.css') }}" rel="stylesheet">
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/menu.css') }}" rel="stylesheet">
 
 </head>
 <body>
-<main id="app">
+<div id="app">
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
@@ -81,8 +82,8 @@
         <div class="leftbar__content">
         <div><img src="/img/logo.png" class="leftbar__logo" alt="logo"></div>
 
-    <form id="search" class="leftbar__searchform" >
-        <input type="search" class="leftbar__search-input"name="search" required placeholder="Rechercher" >
+    <form id="search" class="leftbar__searchform">
+        <input type="search" class="leftbar__search-input btn-search"name="search" data-pjax required placeholder="Rechercher" >
         <button type="submit" class="leftbar__loupe"><img src="/img/icon-loupe.png" class="leftbar__loupe"></button>
     </form>
 <div class="leftbar__user">
@@ -96,7 +97,7 @@
     @endauth
     <ul class="leftbar__ul">
        <li class="leftbar__li"> <img src="/img/coeur.png" class="leftbar__icons"><a href="#">Coups de coeurs</a></li>
-       <li class="leftbar__li"> <img src="/img/playlist.png" class="leftbar__icons"><a href="/playlists">Mes playlists</a></li>
+        <li class="leftbar__li btn-playlists"> <img src="/img/playlist.png" class="leftbar__icons"><span>Mes playlists</span></li>
         <li class="leftbar__li"><img src="/img/disque.png" class="leftbar__icons"><a href="#">Albums</a></li>
 
     </ul>
@@ -104,7 +105,47 @@
         </div>
 
     </div>
-</main>
+
+    <div class="menu__playlists">
+        <form action="/playlist/" method="POST">
+            <input type="text" name="nom" placeholder="titre de la playlist">
+            <textarea name="description" placeholder="description de la playlist" cols="30" rows="10"></textarea>
+            <input type="submit" name="creer" value="créer">
+            {{ csrf_field() }}
+        </form>
+
+
+        <ul>
+            @foreach(Auth::user()->playlists as $p)
+                <li>
+                    <img src="{{$p->fichier}}"  />
+                    <a href="">{{$p->nom}}</a>
+                    <form action="ajouterPlaylist" method="post" enctype="multipart/form-data">
+                        <input type="submit" name="ajouter" value="ajouter à la playlist"/>
+                    </form>
+                </li>
+            @endforeach
+        </ul>
+    </div>
+
+    <div class="menu__search">
+        <ul>
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+        </ul>
+    </div>
+
 
 
     <main class="py-4" id="pjax-container">
@@ -122,6 +163,7 @@
 <script src="{{ asset('js/jquery.pjax.js') }}"></script>
 <script src="{{ asset('js/toastr.min.js') }}"></script>
 <script src="{{ asset('js/lecteur.js') }}"></script>
+<script src="{{ asset('js/menu.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
 
 </body>

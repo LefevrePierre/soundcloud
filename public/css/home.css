@@ -19,7 +19,7 @@ input:focus {
     position:fixed;
     z-index:2000;
     top:0;
-    width:220px;
+    width:235px;
     height:100vh;
 }
 
@@ -122,6 +122,10 @@ audio{
     padding:0;
 }
 .leftbar__ul a{
+    margin-left:25px;
+}
+
+.leftbar__ul span{
     margin-left:25px;
 }
 .leftbar__li{

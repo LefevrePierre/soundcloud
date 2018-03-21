@@ -86,6 +86,7 @@ class MonControlleur extends Controller
             abort(404);
         return view("playlist",['playlist'=>$playlist]);
     }
+
     public function creerPlaylist(Request $request) {
 
     $p = new Playlist();
