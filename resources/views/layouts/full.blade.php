@@ -122,6 +122,20 @@
         </div>
     </div>
 
+
+
+    <div class="menu__upload">
+        <div class="menu__main-content">
+            Uploader ma musique
+
+            <input type="text" placeholder="Titre">
+            <input type="text" placeholder="Genre">
+            <input class="" type="submit">
+
+        </div>
+    </div>
+
+
     <div class="menu__formulairechanson">
 
     </div>
