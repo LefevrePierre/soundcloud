@@ -44,12 +44,6 @@
                                     </label>
 
 
-
-
-
-
-
-
                                 <a class="login__forgot" href="{{ route('password.request') }}">
                                     Mot de passe oublié?
                                 </a>

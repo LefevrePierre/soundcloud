@@ -19,11 +19,11 @@ class MonControlleur extends Controller
         //print_r($utilisateurs);
         View::share('utilisateurs', $utilisateurs);
 
-        $playlists = Playlist::where("utilisateur_id ", Auth::id())->orderBy('name','desc')->offset(0)
-            ->limit(10)
-            ->get();
+      //  $playlists = Playlist::where("utilisateur_id ", Auth::id())->orderBy('name','desc')->offset(0)
+        //    ->limit(10)
+            //->get();
         //print_r($utilisateurs);
-        View::share('playlists', $playlists);
+      //  View::share('playlists', $playlists);
 
     }
 

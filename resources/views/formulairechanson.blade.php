@@ -22,7 +22,7 @@
     <input type="file" name="img"/><br>
     <input type="file" name="chanson"/>
 
-    {{ csrf_field() }}
+        {{ csrf_field() }}
         <input type="submit"/>
 
 </form>

@@ -112,11 +112,11 @@
             <h2 class="menu__search-title">Les derniers artistes inscrits</h2>
 
             <ul>
-            @foreach($utilisateurs as $u)
-                <li>
-                    <a href="/utilisateur/{{$u->id}}" data-pjax>{{$u->name}}</a>
-                </li>
-            @endforeach
+                @foreach($utilisateurs as $u)
+                    <li>
+                        <a href="/utilisateur/{{$u->id}}" data-pjax>{{$u->name}}</a>
+                    </li>
+                @endforeach
             </ul>
 
         </div>

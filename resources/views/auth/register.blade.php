@@ -49,10 +49,10 @@
 
 
                                 <input id="password-confirm" type="password" class="registration__form__control" name="password_confirmation" placeholder="confirmez votre mot de passe" required>
-
-
+                        <input type="file" name="img"/><br>
 
 <div class="registration__btn__create">
+    {{ csrf_field() }}
                                 <button type="submit" class="registration__btn">
                                     Créer un compte
                                 </button>
