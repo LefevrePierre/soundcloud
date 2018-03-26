@@ -93,7 +93,7 @@
     <p class="leftbar__paragraph">Uploadez vos titres préférés<br/> dès maintenant, partagez<br/> vos goûts à la communauté</p>
 
     @auth
-        <a href="/formulairechanson" data-pjax class="leftbar__input-form btn-formulairechanson">Uploadez!</a><br>
+        <span  data-pjax class="leftbar__input-form btn-formulairechanson btn-upload">Uploadez!</span><br>
     @endauth
 
     <ul class="leftbar__ul">
