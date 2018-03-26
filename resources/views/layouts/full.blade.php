@@ -127,7 +127,7 @@
     </div>
 
     <div class="menu__playlists">
-        <div class="menu__main-content">
+     {{--   <div class="menu__main-content">
         <h2 class="menu__search-title">Mes playlists</h2>
         <ul>
             @foreach(Auth::user()->playlists as $p)
@@ -139,7 +139,7 @@
 
             @endforeach
         </ul>
-        </div>
+        </div>--}}
     </div>
 
 
