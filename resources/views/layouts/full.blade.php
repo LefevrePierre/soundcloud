@@ -18,6 +18,7 @@
     <link href="{{ asset('css/registration.css') }}" rel="stylesheet">
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
     <link href="{{ asset('css/menu.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/index.css') }}" rel="stylesheet">
 
 </head>
 <body>
@@ -161,11 +162,10 @@
 
 
     <main class="py-4" id="pjax-container">
-        <div class="container__c">
-        <div class="container__text">
+
     @yield('content')
-        </div>
-        </div>
+
+
 </main>
 
 

@@ -1,0 +1,81 @@
+.home__background-image{
+    background: url("/img/home.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-position: 50% 72%;
+}
+.home__container{
+    margin-left:240px;
+}
+.home__nouveautes {
+margin-top:50px;
+    display: grid;
+    grid-template-columns:repeat(5, 0.2fr);
+    grid-auto-rows: auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 0;
+    width: 96%;
+}
+
+.home__nouveautes-img {
+    height: 280px;
+    width:auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom:10px;
+
+}
+
+.home__container h1{
+    margin-left:40px;
+    margin-top:0!important;
+    color:white;
+    padding-top:40px;
+}
+
+.home__background{
+    background-color:#12141f;
+
+}
+
+.home__chanson-title{
+    color:white;
+    display:block;
+    text-transform:capitalize;
+    margin-bottom:70px;
+}
+
+.home__infos{
+    display:flex;
+ margin:0 auto;
+    color:white;
+    width:92%;
+}
+.home__infos-txt{
+   margin-top:50px;
+}
+.home__infos-txt p{
+    margin-top:30px;
+    width:60%;
+    font-size:1.2em;
+    text-justify: distribute;
+}
+
+
+.home__infos-btn {
+    margin-top:20px;
+    padding:4px 25px;
+    background-color:#d75a4a;
+    text-transform:uppercase;
+    color:white;
+    border-radius:30px;
+    transition:400ms all;
+    border:none;
+}
+.home__infos-btn:hover {
+
+    background-color:#f76d5b;
+
+}

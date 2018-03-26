@@ -6,13 +6,6 @@ ul {
     list-style: none;
 }
 
-.container__c{
-     width:100%;
-     background-color: red;
-     height:100vh;
-
- }
-
 .container__text{
     position: absolute;
     right: 200px;
@@ -139,7 +132,6 @@ audio{
 }
 
 .leftbar__content{
-
     position:relative;
     width:80%;
     margin:0 auto;

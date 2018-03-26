@@ -49,7 +49,7 @@
 
 
                                 <input id="password-confirm" type="password" class="registration__form__control" name="password_confirmation" placeholder="confirmez votre mot de passe" required>
-
+                        <input type="file" name="imgProfil"/><br>
 
 
 <div class="registration__btn__create">

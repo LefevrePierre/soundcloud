@@ -1,12 +1,37 @@
 @extends('layouts.app')
 
 @section('content')
-    <a href="playlists/">Liste des playlists</a>
+    <div class="home__background-image">
 
-    <ul>
-        @foreach($chansons as $c)
-            <li><a href="#" class="chanson" data-file='{{$c->fichier}}'>{{$c->nom}}</a></li>
-            @endforeach
-    </ul>
+    </div>
+    <div class="home__background">
+    <div class="home__container">
+        <h1>Nouveautés</h1>
+
+
+            <ul class="home__nouveautes">
+                @foreach($chansons as $c)
+
+                    <li>
+                        <div class="home__nouveautes-img" style="background-image: url({{$c->img}})"></div>
+                        <a href="#" class="chanson home__chanson-title" data-file="{{$c->fichier}}" >{{$c->nom}}</a>
+                    </li>
+
+                @endforeach
+            </ul>
+        <div class="home__infos">
+            <div class="home__infos-txt">
+            <h2>Avec vous partout et non-stop</h2>
+            <p>Tout devient si simple avec notre dernière version mobile. Grâce à elle vos titres coups de coeurs ainsi que vos playlists du moment sont accessibles ou que vous soyez. </p>
+            <input type="button" class="home__infos-btn" value="Télécharger">
+            </div>
+            <img src="../img/phones.png" alt="phones">
+        </div>
+    </div>
+
+
+</div>
+
+
 
 @endsection
