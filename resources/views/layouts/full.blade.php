@@ -108,7 +108,7 @@
     </div>
 
     <div class="menu__search">
-        <div class="menu__search-content">
+        <div class="menu__main-content">
             <h2 class="menu__search-title">Les derniers artistes inscrits</h2>
 
             <ul>
@@ -127,20 +127,19 @@
     </div>
 
     <div class="menu__playlists">
-
+        <div class="menu__main-content">
+        <h2 class="menu__search-title">Mes playlists</h2>
         <ul>
-            @foreach($playlists as $p)
-                <li>
+            @foreach(Auth::user()->playlists as $p)
+
                 <li>
                     <img src="{{$p->fichier}}"  />
                     <a href="">{{$p->nom}}</a>
-                    <form action="ajouterPlaylist" method="post" enctype="multipart/form-data">
-                        <input type="submit" name="ajouter" value="ajouter à la playlist"/>
-                    </form>
                 </li>
-                </li>
+
             @endforeach
         </ul>
+        </div>
     </div>
 
 

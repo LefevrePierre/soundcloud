@@ -13,13 +13,13 @@ class MonControlleur extends Controller
 {
     function __construct()
     {
-        $utilisateurs = User::whereRaw("1 = 1 ")->orderBy('id','desc')->offset(0)
+        $utilisateurs = User::whereRaw("1 = 1")->orderBy('id','desc')->offset(0)
             ->limit(5)
             ->get();
         //print_r($utilisateurs);
         View::share('utilisateurs', $utilisateurs);
 
-        $playlists = Playlist::whereRaw("1 = 1 ")->orderBy('id','desc')->offset(0)
+        $playlists = Playlist::where("utilisateur_id ", Auth::id())->orderBy('name','desc')->offset(0)
             ->limit(10)
             ->get();
         //print_r($utilisateurs);
