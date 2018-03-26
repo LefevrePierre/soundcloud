@@ -47,6 +47,28 @@
 
 
 
+        $('.btn-upload').on("click", function () {
+
+            //si le menu est déjà la, on le ivre
+            if ($('.menu__upload').hasClass("menu-apparition")) {
+                $('.menu__upload').removeClass("menu-apparition");
+                $('.menu__upload').addClass("menu-disparition");
+            } else { //si non on le met
+                $('.menu__upload').addClass("menu-apparition");
+                $('.menu__upload').removeClass("menu-disparition");
+
+                //si un au tre menu etait déjà ouvert
+                if ($('*[class^="menu__"]:not(".menu__upload")').hasClass("menu-apparition")) {
+                    //on le fait disparaitre
+                    $('*[class^="menu__"]:not(".menu__upload")').removeClass("menu-apparition");
+                    $('*[class^="menu__"]:not(".menu__upload")').addClass("menu-disparition");
+                }
+            }
+
+        });
+
+
+
         $('.container__c').on("click", function () {
             $('*[class^="menu__"]').removeClass("menu-apparition");
             $('*[class^="menu__"]').addClass("menu-disparition");

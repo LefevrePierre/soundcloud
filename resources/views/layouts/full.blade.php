@@ -93,8 +93,11 @@
     <p class="leftbar__paragraph">Uploadez vos titres préférés<br/> dès maintenant, partagez<br/> vos goûts à la communauté</p>
 
     @auth
-        <a href="/formulairechanson" data-pjax class="leftbar__input-form btn-formulairechanson">Uploadez!</a><br>
+        <span  data-pjax class="leftbar__input-form btn-formulairechanson btn-upload">Uploadez!</span><br>
     @endauth
+
+
+
 
     <ul class="leftbar__ul">
        <li class="leftbar__li"> <img src="/img/coeur.png" class="leftbar__icons"><a href="#">Coups de coeurs</a></li>
@@ -106,6 +109,22 @@
         </div>
 
     </div>
+    <div class="menu__upload">
+        @include('_errors')
+
+        <form action="/creerchanson" data-pjax method="post" enctype="multipart/form-data">
+            <input type="text" name="nom" placeholder="Nom de la musique" value="{{old('nom')}}"/><br>
+            <input type="text" name="style" placeholder="style de la musique"value="{{old('style')}}"/><br>
+            <input type="file" name="img"/><br>
+            <input type="file" name="chanson"/>
+
+            {{ csrf_field() }}
+            <input type="submit"/>
+
+        </form>
+    </div>
+
+
 
     <div class="menu__search">
         <div class="menu__search-content">
@@ -122,9 +141,6 @@
         </div>
     </div>
 
-    <div class="menu__formulairechanson">
-
-    </div>
 
     <div class="menu__playlists">
 
