@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('content')
-{{$utilisateur->name}}
     @auth
         @if(Auth::id() != $utilisateur->id)
             @if(Auth::user()->jeLesSuit->contains($utilisateur->id))

@@ -93,8 +93,9 @@
     <p class="leftbar__paragraph">Uploadez vos titres préférés<br/> dès maintenant, partagez<br/> vos goûts à la communauté</p>
 
     @auth
-        <a href="/formulairechanson" data-pjax class="leftbar__input-form">Uploadez!</a><br>
+        <a href="/formulairechanson" data-pjax class="leftbar__input-form btn-formulairechanson">Uploadez!</a><br>
     @endauth
+
     <ul class="leftbar__ul">
        <li class="leftbar__li"> <img src="/img/coeur.png" class="leftbar__icons"><a href="#">Coups de coeurs</a></li>
         <li class="leftbar__li btn-playlists"> <img src="/img/playlist.png" class="leftbar__icons"><span>Mes playlists</span></li>
@@ -106,17 +107,30 @@
 
     </div>
 
-    <div class="menu__playlists">
-        <form action="/playlist/" method="POST">
-            <input type="text" name="nom" placeholder="titre de la playlist">
-            <textarea name="description" placeholder="description de la playlist" cols="30" rows="10"></textarea>
-            <input type="submit" name="creer" value="créer">
-            {{ csrf_field() }}
-        </form>
+    <div class="menu__search">
+        <div class="menu__search-content">
+            <h2 class="menu__search-title">Les derniers artistes inscrits</h2>
 
+            <ul>
+            @foreach($utilisateurs as $u)
+                <li>
+                    <a href="/utilisateur/{{$u->id}}" data-pjax>{{$u->name}}</a>
+                </li>
+            @endforeach
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="menu__formulairechanson">
+
+    </div>
+
+    <div class="menu__playlists">
 
         <ul>
-            @foreach(Auth::user()->playlists as $p)
+            @foreach($playlists as $p)
+                <li>
                 <li>
                     <img src="{{$p->fichier}}"  />
                     <a href="">{{$p->nom}}</a>
@@ -124,33 +138,20 @@
                         <input type="submit" name="ajouter" value="ajouter à la playlist"/>
                     </form>
                 </li>
+                </li>
             @endforeach
         </ul>
     </div>
 
-    <div class="menu__search">
-        <ul>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
-        </ul>
-    </div>
+
 
 
 
     <main class="py-4" id="pjax-container">
         <div class="container__c">
+        <div class="container__text">
     @yield('content')
+        </div>
         </div>
 </main>
 

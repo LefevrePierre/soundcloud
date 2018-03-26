@@ -1,3 +1,4 @@
+@auth
 
 @if (request()->ajax())
     @yield("content")
@@ -13,3 +14,9 @@
     });
 </script>
 @endif
+
+    @endauth
+
+@guest
+    @include('../auth/login')
+@endguest

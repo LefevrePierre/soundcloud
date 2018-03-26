@@ -7,9 +7,26 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\View;
 
 class MonControlleur extends Controller
 {
+    function __construct()
+    {
+        $utilisateurs = User::whereRaw("1 = 1 ")->orderBy('id','desc')->offset(0)
+            ->limit(5)
+            ->get();
+        //print_r($utilisateurs);
+        View::share('utilisateurs', $utilisateurs);
+
+        $playlists = Playlist::whereRaw("1 = 1 ")->orderBy('id','desc')->offset(0)
+            ->limit(10)
+            ->get();
+        //print_r($utilisateurs);
+        View::share('playlists', $playlists);
+
+    }
+
     public function index()
     {
 

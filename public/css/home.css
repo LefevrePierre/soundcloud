@@ -7,9 +7,15 @@ ul {
 }
 
 .container__c{
-    width:100%;
-    background-color: red;
-    height:100vh;
+     width:100%;
+     background-color: red;
+     height:100vh;
+
+ }
+
+.container__text{
+    position: absolute;
+    right: 200px;
 }
 input:focus {
     outline:none;

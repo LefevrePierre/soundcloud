@@ -45,6 +45,8 @@
 
         });
 
+
+
         $('.container__c').on("click", function () {
             $('*[class^="menu__"]').removeClass("menu-apparition");
             $('*[class^="menu__"]').addClass("menu-disparition");
