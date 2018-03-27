@@ -1,3 +1,6 @@
+
+
+
 $(document).pjax('[data-pjax] a, a[data-pjax]', '#pjax-container');
 $(document).pjax('[data-pjax-toggle] a, a[data-pjax-toggle]', '#pjax-container',{push:false});
 
@@ -21,25 +24,25 @@ $(document).ready(function() {
         e.preventDefault();
         if ($.support.pjax)
             $.pjax({url: "/recherche/"+ e.target.elements[0].value, container: '#pjax-container'})
-            else
-        window.location.href = "/recherche/" + e.target.elements[0].value;
+        else
+            window.location.href = "/recherche/" + e.target.elements[0].value;
 
 
     });
     $("#testAjax").click(function(e){
         e.preventDefault();
-    $.ajax({
-        type: "GET", // Le type de ma requete
-        url: "/testAjax", // L url vers laquelle la requete sera envoyee
+        $.ajax({
+            type: "GET", // Le type de ma requete
+            url: "/testAjax", // L url vers laquelle la requete sera envoyee
 
-        success: function (data, textStatus, jqXHR) {
-            $("#aremplir").html(data);
-        },
-        error: function (jqXHR, textStatus, errorThrown) {
-            // Une erreur sest produite lors de la requete
-        }
+            success: function (data, textStatus, jqXHR) {
+                $("#aremplir").html(data);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                // Une erreur sest produite lors de la requete
+            }
+        });
     });
-});
 
     toastr.options = {
         "closeButton": false,
@@ -61,4 +64,5 @@ $(document).ready(function() {
 
 
 });
+
 

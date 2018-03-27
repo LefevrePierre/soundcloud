@@ -3,8 +3,11 @@
 @section('content')
 <div class="home__background">
     <div class="main__container">
+
     <div class="user__infos-container">
-   <h1 class="user__name">{{$utilisateur->name}}</h1>
+        <img src="/uploads/avatars/{{Auth::user()->avatar}}" class="user__avatar">
+        <div class="user__name-sub">
+   <h1 class="user__name">{{$utilisateur->name}}</h1> <p>({{$utilisateur->ilsMeSuivent->count()}} abonnés - {{$utilisateur->jeLesSuit->count()}} abonnements)</p></div>
     @auth
         @if(Auth::id() != $utilisateur->id)
             @if(Auth::user()->jeLesSuit->contains($utilisateur->id))
@@ -19,8 +22,8 @@
             @endif
         @endif
     @endAuth
-        <p>Il suit {{$utilisateur->jeLesSuit->count()}} personnes</p>
-        <p>Il est suivi par {{$utilisateur->ilsMeSuivent->count()}} personnes</p>
+
+
     </div>
 
 

@@ -20,6 +20,8 @@
     <link href="{{ asset('css/menu.css') }}" rel="stylesheet">
     <link href="{{ asset('css/index.css') }}" rel="stylesheet">
     <link href="{{ asset('css/utilisateur.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hind:300,400,700" rel="stylesheet">
 
 </head>
 <body>
@@ -60,7 +62,11 @@
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu dropdown-content">
+                                <li>
+                                    <a href="{{ route('profile') }}">Profile</a>
+
+                                </li>
                                 <li>
                                     <a href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -72,6 +78,10 @@
                                         {{ csrf_field() }}
                                     </form>
                                 </li>
+
+
+
+
                             </ul>
                         </li>
                     @endguest
@@ -82,7 +92,8 @@
 
     <div class="leftbar__container" >
         <div class="leftbar__content">
-        <div><img src="/img/logo.png" class="leftbar__logo" alt="logo"></div>
+            <div><a href="/">
+                    <img src="/img/logo.png" class="leftbar__logo" alt="logo"></a></div>
 
     <form id="search" class="leftbar__searchform">
         <input type="search" class="leftbar__search-input btn-search"name="search" data-pjax required placeholder="Rechercher" >
@@ -114,11 +125,7 @@
             <h2 class="menu__search-title">Les derniers artistes inscrits</h2>
 
             <ul>
-            @foreach($utilisateurs as $u)
-                <li>
-                    <a href="/utilisateur/{{$u->id}}" data-pjax>{{$u->name}}</a>
-                </li>
-            @endforeach
+
             </ul>
 
         </div>
@@ -128,12 +135,20 @@
 
     <div class="menu__upload">
         <div class="menu__main-content">
-            Uploader ma musique
-
-            <input type="text" placeholder="Titre">
-            <input type="text" placeholder="Genre">
-            <input class="" type="submit">
-
+            <h2 class="menu__search-title">Uploader ma musique</h2>
+            <form action="/creerchanson" data-pjax method="post" enctype="multipart/form-data">
+            <input type="text" name="nom" placeholder="Titre" value="{{old('nom')}}"/><br>
+            <input type="text" name="style" placeholder="Genre"value="{{old('style')}}"/><br>
+           <LABEL CLASS="file__container">
+               + img
+            <input type="file" name="img"/><br></LABEL>
+            <label class="file__container2">
++ titre
+            <input type="file" name="chanson"/>
+            </label>
+            {{ csrf_field() }}
+            <input type="submit" value="uploader"/>
+            </form>
         </div>
     </div>
 

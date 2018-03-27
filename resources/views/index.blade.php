@@ -11,7 +11,7 @@
     <div class="home__background">
 
     <div class="home__container">
-        <h2>Nouveautés</h2>
+        <h2 class="home__new-title">Nouveautés</h2>
 
 
             <ul class="home__nouveautes">
