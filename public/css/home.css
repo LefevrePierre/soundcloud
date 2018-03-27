@@ -148,10 +148,17 @@ audio{
     width: 100%;
     height: 100%;
     position: relative;
-    background: rgba(255,255,255,0.5);
+    display: flex;
+    padding: 20px;
+    align-items: flex-end;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(255,255,255,0.78) 76%, rgba(255,255,255,1) 97%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(255,255,255,0.78) 76%,rgba(255,255,255,1) 97%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(255,255,255,0.78) 76%,rgba(255,255,255,1) 97%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }
 
 .home__nouveautes-hover img {
-    height: 25px;
+    height: 30px;
     fill: red;
+    margin-right: 7px;
 }

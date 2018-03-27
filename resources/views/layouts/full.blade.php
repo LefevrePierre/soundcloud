@@ -177,6 +177,7 @@
 <script src="{{ asset('js/toastr.min.js') }}"></script>
 <script src="{{ asset('js/lecteur.js') }}"></script>
 <script src="{{ asset('js/menu.js') }}"></script>
+<script src="{{ asset('js/divers.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
 
 </body>

@@ -18,8 +18,13 @@
                 @foreach($chansons as $c)
 
                     <li>
-                        <div class="home__nouveautes-img" style="background-image: url({{$c->img}})"><div class="home__nouveautes-hover">
-                                <img src="../img/movie-player-play-button.svg" alt=""></div></div>
+                        <div class="home__nouveautes-img" style="background-image: url({{$c->img}})">
+                            <div class="home__nouveautes-hover">
+                                <img src="../img/movie-player-play-button.svg" alt="">
+                                <img src="../img/movie-player-play-button.svg" alt="">
+                                <img src="../img/movie-player-play-button.svg" alt="">
+                            </div>
+                        </div>
                         <a href="#" class="chanson home__chanson-title" data-file="{{$c->fichier}}" >{{$c->nom}}</a>
                     </li>
 
