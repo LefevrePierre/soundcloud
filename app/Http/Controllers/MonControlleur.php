@@ -98,9 +98,11 @@ class MonControlleur extends Controller
 
     public function playlist($id)
     {
+
         $playlist = Playlist::find($id);
         if ($playlist==false)
             abort(404);
+
         return view("playlist",['playlist'=>$playlist]);
     }
 
@@ -111,7 +113,7 @@ class MonControlleur extends Controller
     $p->description = $request->input('description');
     $p->utilisateur_id = Auth::id();
     $p->save();
-    return redirect('/listPlaylists');
+        return redirect('/')->with('toastr', ['statut' => 'success','message' => 'Votre playlist est maintenant disponible !']);
 
 }
     public function afficherPlaylists($id) {

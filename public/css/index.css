@@ -25,10 +25,11 @@ margin-top:50px;
     background-position: center;
     background-repeat: no-repeat;
     margin-bottom:10px;
+    border-radius: 6px;
 
 }
 
-.home__container h1{
+.home__container h2{
     margin-left:40px;
     margin-top:0!important;
     color:white;
@@ -77,5 +78,14 @@ margin-top:50px;
 .home__infos-btn:hover {
 
     background-color:#f76d5b;
+
+}
+.home__background-h1{
+    margin-top:0;
+    margin-left:40px;
+    padding-top:350px;
+    font-size:4em;
+    color:white;
+    width:60%;
 
 }

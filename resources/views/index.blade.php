@@ -1,12 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
+
     <div class="home__background-image">
+        <div class="home__container">
+        <h1 class="home__background-h1">Découvrez les nouveaux titres</h1>
+        </div>
 
     </div>
     <div class="home__background">
+
     <div class="home__container">
-        <h1>Nouveautés</h1>
+        <h2>Nouveautés</h2>
 
 
             <ul class="home__nouveautes">

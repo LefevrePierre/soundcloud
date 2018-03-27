@@ -1,11 +1,10 @@
-<ul>
-    @foreach(Auth::user()->playlists as $p)
+<div class="user__titres-fieldset"></div>
+<ul class="user__playlists-container">
+    @foreach ($playlists as $p)
         <li>
-            <img src="{{$p->fichier}}"  />
-            <a href="">{{$p->nom}}</a>
-            <form action="ajouterPlaylist" method="post" enctype="multipart/form-data">
-                <input type="submit" name="ajouter" value="ajouter à la playlist"/>
-            </form>
-        </li>
+            <img src="{{$p->fichier}}"  />   </li>
+            <li><a class="user__playlist-titre"href="">{{$p->nom}}</a></li>
+           <li> <span class="user__playlist-nbr">tant de titres</span></li>
+
     @endforeach
 </ul>

@@ -44,7 +44,7 @@ Route::get('/playlists', 'MonControlleur@playlists');
 
 Route::get('/playlist/{id}', 'MonControlleur@playlist')->where('id', '[0-9]+');
 
-// Route::post('/creerPlaylist', 'MonControlleur@creerPlaylist');
+Route::post('/creerPlaylist', 'MonControlleur@creerPlaylist');
 
 Route::post('/playlistAjout/{idP}/{idM}', 'MonControlleur@playlistAjout')->where('idM', '[0-9]+')->where('idP', '[0-9]+');
 

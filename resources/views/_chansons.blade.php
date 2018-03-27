@@ -1,12 +1,21 @@
 <ul>
     @foreach($musiques as $m)
-        <img src="{{$m->img}}" alt="{{$m->nom}}"/>
 
-        <li>
-            <a href="#" class="chanson" data-file="{{$m->fichier}}" >{{$m->nom}}</a>
-            <a href="/supprimerChanson/{{$m->id}}">x</a>
 
-        </li>
+        <div class="user__titres-fieldset"></div>
+    <ul class="user__titres-container">
+
+
+
+            <li><a href="#" class="chanson user__play" data-file="{{$m->fichier}}"><span>&#9658;</span></a></li>
+
+            <li><div class="user__chanson-img" style="background-image: url({{$m->img}})"</div></li>
+           <li> <a href="#" class="chanson user__titre" data-file="{{$m->fichier}}" >{{$m->nom}}</a></li>
+        <li><span>{{$m->duree}}</span></li>
+          <li> <span>{{$m->style}}</span></li>
+        <li><a class="user__delete"href="/supprimerChanson/{{$m->id}}">supprimer</a></li>
+
+</ul>
 
         <ul>
             @auth
