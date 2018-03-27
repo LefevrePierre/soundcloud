@@ -73,6 +73,9 @@
     transition:400ms all;
 }
 
+.user__titres {
+    width: 70%;
+}
 
 .user__titres-container li::first-letter{
     text-transform: capitalize;
@@ -95,7 +98,6 @@ display:grid;
     grid-auto-rows: auto;
     grid-column-gap: 0;
     grid-row-gap: 0;
-    width:70%;
     align-items:center;
 
 }
@@ -112,7 +114,7 @@ display:grid;
 
 .user__titres-fieldset{
     border-top:1px solid grey;
-    width:70%;
+    width:100%;
     margin-bottom:15px;
 }
 .user__chanson-img{
@@ -124,15 +126,12 @@ display:grid;
     margin-bottom:10px;
     border-radius: 6px;
 }
-.user__playlists{
-  position:absolute;
-    left:78%;
-    top:23%;
+.user__playlists {
 }
 .user__playlists-container{
     padding-left:0;
     display:grid;
-    grid-template-columns:1fr
+    grid-template-columns:1fr;
     grid-auto-rows: auto;
     grid-column-gap: 0;
     grid-row-gap: 0;
@@ -147,4 +146,8 @@ display:grid;
 .user__playlist-nbr{
     display:inline-block;
     font-size:0.4em;
+}
+
+#all {
+    display: flex;
 }
