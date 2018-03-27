@@ -89,6 +89,24 @@
 
 }
 
+
+.menu__upload input {
+    border: none;
+    border-bottom: 1px blue solid;
+    transition: 200ms all ease-in-out;
+    padding: 8px 0px;
+    margin: 10px 0px;
+}
+
+.menu__upload input:focus {
+    background: blue;
+    color: white;
+}
+.menu__upload input::placeholder {
+    color: blue;
+}
+
+
 .menu__search-title{
     font-size: 1em;
     font-weight:bold;
