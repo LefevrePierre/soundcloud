@@ -26,9 +26,9 @@
 </head>
 <body>
 <div id="app">
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="">
         <div class="container">
-            <div class="navbar-header">
+            <div class="">
 
                 <!-- Collapsed Hamburger -->
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
@@ -51,7 +51,7 @@
                 </ul>
 
                 <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right test">
                     <!-- Authentication Links -->
                     @guest
                         <li><a href="{{ route('login') }}" data-pjax>Login</a></li>
@@ -92,7 +92,7 @@
 
     <div class="leftbar__container" >
         <div class="leftbar__content">
-            <div><a href="/">
+            <div><a href="/" data-pjax>
                     <img src="/img/logo.png" class="leftbar__logo" alt="logo"></a></div>
 
     <form id="search" class="leftbar__searchform">
@@ -100,7 +100,9 @@
         <button type="submit" class="leftbar__loupe"><img src="/img/icon-loupe.png" class="leftbar__loupe"></button>
     </form>
 <div class="leftbar__user">
-    <img src="#" alt=""/> <a href="utilisateur">Ma musique</a><br/>
+    @auth
+    <img src="/uploads/avatars/{{Auth::user()->avatar}}" class="leftbar__avatar"alt="Avatar"/> <a href="/utilisateur/{{Auth::user()->id}}">Ma musique</a><br/>
+        @endauth
 </div>
 
     <p class="leftbar__paragraph">Uploadez vos titres préférés<br/> dès maintenant, partagez<br/> vos goûts à la communauté</p>
@@ -123,10 +125,19 @@
     <div class="menu__search">
         <div class="menu__main-content">
             <h2 class="menu__search-title">Les derniers artistes inscrits</h2>
-
+@auth
             <ul>
-
+                @foreach($utilisateurs as $u)
+                    <li class="menu__search-userContainer">
+                        <img src="/uploads/avatars/{{$u->avatar}}" class="menu__search-avatar" alt="avatar">
+                        <div>
+                        <a href="/utilisateur/{{$u->id}}" class="menu__search-userName" data-pjax>{{$u->name}}</a>
+                        <p class="menu__search-follow">Suivi par {{$u->ilsMeSuivent->count()}} personnes</p>
+                        </div>
+                    </li>
+                @endforeach
             </ul>
+    @endauth
 
         </div>
     </div>

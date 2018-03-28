@@ -172,8 +172,7 @@ input[type=submit]:hover{
 }
 
 .menu__upload input:focus {
-    background: blue;
-    color: white;
+color:blue;
 }
 .menu__upload input::placeholder {
     color: blue;
@@ -181,10 +180,43 @@ input[type=submit]:hover{
 
 .menu__search-title{
     font-size: 1em;
-    font-weight:bold;
+    font-weight:regular;
+    margin-bottom:20px;
 
 }
+.menu__main-content ul{
+    padding-left:0;
+}
+.menu__search-userContainer{
+    display:flex;
+    align-items:center;
+    margin-bottom:10px;
+}
+.menu__search-userName::first-letter{
+    text-transform: capitalize;
+}
+.menu__search-userName{
+    color:#292929;
+    font-size: 1.2em;
+}
+.menu__search-follow{
+    font-size:0.8em;
+}
 
+.test{
+    position:relative;
+    z-index:200;
+}
+
+.menu__search-avatar{
+    display:block;
+    margin:0 auto;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    margin-left:0;
+    margin-right:20px;
+}
 .menu__main-content{
     margin-left:40px;
     margin-top:70px;

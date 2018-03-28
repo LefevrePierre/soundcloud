@@ -68,8 +68,10 @@ input:focus {
     width:70px;
     height:auto;
 }
-.leftbar__searchform{
-  position:relative;
+.leftbar__searchform {
+    position: relative;
+    margin-bottom: 100px;
+
 
 }
 
@@ -90,10 +92,20 @@ input:focus {
 .leftbar__search-input::placeholder{
     color: #7976df;
 }
-
+.leftbar__avatar{
+    display:block;
+    margin:0 auto;
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    margin-left:0;
+    margin-right:20px;
+}
 
 .leftbar__user{
-    margin-top:100px;
+ display:flex;
+    align-items:center;
+    margin-bottom:30px;
 
 }
 
@@ -186,16 +198,30 @@ audio{
     height: 100%;
     position: relative;
     display: flex;
-    padding: 20px;
     align-items: flex-end;
-    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(255,255,255,0.78) 76%, rgba(255,255,255,1) 97%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(255,255,255,0.78) 76%,rgba(255,255,255,1) 97%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(255,255,255,0.78) 76%,rgba(255,255,255,1) 97%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    background: -moz-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
 }
 
-.home__nouveautes-hover img {
-    height: 30px;
-    fill: red;
-    margin-right: 7px;
+.home__nouveautes-hover a{
+
+margin-bottom:15px;
+    margin-left:20px;
+    transition:400ms alls;
 }
+
+.home__nouveautes-hover a:hover{
+    height: 37px;
+    width:37px;
+    margin-bottom:13px;
+opacity:0.9;
+}
+
+.home__nouveautes-hover img{
+    height: 35px;
+    width:35px;
+    transition:400ms all;
+}
+

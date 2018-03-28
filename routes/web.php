@@ -17,12 +17,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::group(['middleware' => ['auth']], function() {
 Route::get('profile', 'UserController@profile')->name('profile');
 Route::post('profile', 'UserController@update_avatar');
 
 Route::get('/','MonControlleur@index');
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/formulairechanson','MonControlleur@formulairechanson');
 
@@ -53,4 +54,4 @@ Route::post('/playlistAjout/{idP}/{idM}', 'MonControlleur@playlistAjout')->where
 
 Route::post('/musique', 'MonControlleur@ajoutPlaylist');
 
-Route::get('/testAjax', 'MonControlleur@testAjax');
+Route::get('/testAjax', 'MonControlleur@testAjax'); });

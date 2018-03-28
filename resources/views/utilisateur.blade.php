@@ -5,7 +5,7 @@
     <div class="main__container">
 
     <div class="user__infos-container">
-        <img src="/uploads/avatars/{{Auth::user()->avatar}}" class="user__avatar">
+        <img src="/uploads/avatars/{{$utilisateur->avatar}}" class="user__avatar">
         <div class="user__name-sub">
    <h1 class="user__name">{{$utilisateur->name}}</h1> <p>({{$utilisateur->ilsMeSuivent->count()}} abonnés - {{$utilisateur->jeLesSuit->count()}} abonnements)</p></div>
     @auth

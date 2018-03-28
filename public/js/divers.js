@@ -1,7 +1,4 @@
-
-
-
-    //mon code est protegé
+//mon code est protegé
     $(document).ready(function () {
 
 
@@ -9,27 +6,19 @@
 
     $('.home__nouveautes-hover').hide();
 
-            $('.home__nouveautes li').hover(
+            $('.home__nouveautes-img').hover(
                 function() {
                     $( this ).find( '.home__nouveautes-hover' ).fadeIn();
                 }
 
             );
 
-        $('.home__nouveautes li').mouseleave(
+        $('.home__nouveautes-img').mouseleave(
             function() {
                 $( this ).find( '.home__nouveautes-hover' ).fadeOut();
             }
 
         );
-
-
-
-
-
-
-
-
 
 
     });

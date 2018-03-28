@@ -13,6 +13,7 @@ class MonControlleur extends Controller
 {
     function __construct()
     {
+
         $utilisateurs = User::whereRaw("1 = 1")->orderBy('id','desc')->offset(0)
             ->limit(5)
             ->get();
@@ -78,6 +79,8 @@ class MonControlleur extends Controller
             abort(404);
         return view("utilisateur",['utilisateur'=>$utilisateur]);
     }
+
+
 
     public function changerSuivi($id)
     {
